@@ -1,0 +1,5 @@
+mkdir -p build/./src/
+cc -I./src -I./src/include -MMD -MP  -c src/function.c -o build/./src/function.c.o
+mkdir -p build/./src/
+cc -I./src -I./src/include -MMD -MP  -c src/intdiv.c -o build/./src/intdiv.c.o
+g++ ./build/./src/function.c.o ./build/./src/intdiv.c.o -o build/final_program 
